@@ -4,18 +4,18 @@ import "./dev-projects.scss";
 import movieImg from '../assets/my-movie-imgs/front-project.png';
 import pokeImg from '../assets/my-movie-imgs/poke-dex-frame.png';
 
-//import sliderFrame from 
-
 const imgArray = [movieImg, pokeImg];
 
 export default function projectsPresentation() {
     let webProjectsElm = document.createElement("section")
-    webProjectsElm.className="web-projects-section"
+    webProjectsElm.className = "web-projects-section"
+
+    let currentImgIndex = 0;
 
     webProjectsElm.innerHTML = `
         <h2>Web-development</h2>
 
-        <div>
+        <div class="text-content">
         <h3>Projects</h3>
         <p>Here you find the overview of my latest projects, which i will update along the way as i advance with my education.</p>
         <p>Since this is school-projects for practical exercises there will be elements that is without functionality.</p>
@@ -26,11 +26,36 @@ export default function projectsPresentation() {
         </ul>
         </div>
 
-        <article>
-        <i class="fa-solid fa-chevron-right"></i>
-        <img src=${imgArray[0]} alt="project img">
+        <article class="gallery">
         <i class="fa-solid fa-chevron-left"></i>
+        <div class=img-container><img class="gallery-img" src=${imgArray[currentImgIndex]} alt="project img"></div>
+        <i class="fa-solid fa-chevron-right"></i>
         </article>
-    `
+    `;
+
+
+    const imgElm = webProjectsElm.querySelector('.gallery-img');
+    const leftBtn = webProjectsElm.querySelector('.fa-chevron-left');
+    const rightBtn = webProjectsElm.querySelector('.fa-chevron-right');
+
+    // Funktion til at opdatere billedet
+    const updateImage = () => {
+        imgElm.src = imgArray[currentImgIndex];
+    };
+
+    // Klik til venstre
+    leftBtn.addEventListener('click', () => {
+        currentImgIndex = (currentImgIndex - 1 + imgArray.length) % imgArray.length;
+        updateImage();
+    });
+
+    // Klik til højre
+    rightBtn.addEventListener('click', () => {
+        currentImgIndex = (currentImgIndex + 1) % imgArray.length;
+        updateImage();
+    });
+
+
     return webProjectsElm
 }
+
