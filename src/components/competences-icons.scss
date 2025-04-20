@@ -1,0 +1,12 @@
+
+.competences-icons {
+    grid-column: 1;
+    justify-self: center;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1em;
+
+    margin: 2em 0;
+    font-size: 2.5em;
+}

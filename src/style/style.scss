@@ -1,0 +1,38 @@
+
+
+@use 'colors' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+$font-stack: "Fira Code", monospace;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    font-family: $font-stack;
+}
+
+button {
+    font-family: $font-stack;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+body {
+    background-color: $background-dark;
+    font-family: $font-stack;
+    color: $text-dark;
+}
+
+main {
+    max-width: 100%;
+    margin: 0 4em;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+

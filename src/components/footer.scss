@@ -1,0 +1,24 @@
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: end;
+
+    margin: 0;
+    padding: 0;
+
+    .contact-info {
+        margin-bottom: 4em;
+        line-height: 2;
+    }
+
+    .profile-pixel {
+        width: 60%;
+        justify-self: end;
+        margin-left: 20%;
+        margin-top: -4em;
+   
+    }
+
+}
