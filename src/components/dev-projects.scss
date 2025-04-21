@@ -3,8 +3,8 @@
 
     grid-column: span 3;
     display: grid;
-    grid-template-columns: 3fr 6fr;
-    margin: 6em 5em;
+    grid-template-columns: 2.8fr 6fr;
+    margin: 6em 6em 8em;
     column-gap: 2em;
     justify-self: center;
 
@@ -20,11 +20,13 @@
         align-items: center;
         color: #000;
         justify-self: center;
+        margin-top: 3em;
         // width: fit-content;
     }
 
     .text-content {
         grid-column: 1;
+        margin-top: 3em;
 
         h3 {
             color: #F0BA87; 
@@ -50,9 +52,11 @@
         display: grid;
         grid-template-columns: 1fr 9fr 1fr;
         justify-items: center;
+        column-gap: 1em;
 
 
         .img-container {
+            grid-column: 2;
             width: 600px;
             height: 404px;
             max-width: 100%;
@@ -65,14 +69,48 @@
             }
         }
 
+        .fa-chevron-left {
+            grid-column: 1;
+        }
+
+        .fa-chevron-right {
+            grid-column: 3;
+        }
 
         .fa-chevron-right, .fa-chevron-left {
-            font-size: 36px;
+            font-size: 42px;
 
             &:hover {
                 cursor: pointer;
             }
+
         }
+
+
+        .backgroundImgs {
+            order: -1;
+            grid-column: 2;
+            margin-bottom: 5em; //hvor meget der rykkes ned så man kan se baggrundsbilledet/næste billede
+
+            .backgroundFilter {
+                background-color: #262535b9;
+                width: 500px;
+                height: 400px;
+                max-width: 100%;
+                position: absolute;
+                right: 20%;
+                z-index: -1;
+            }
+            
+        img {
+            width: 490px;
+            max-width: 100%;
+            position: absolute;
+            z-index: -2;
+            right: 20%;
+        }
+        }
+        
 
     }
 }

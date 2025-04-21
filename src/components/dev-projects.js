@@ -3,8 +3,10 @@ import "./dev-projects.scss";
 
 import movieImg from '../assets/my-movie-imgs/front-project.png';
 import pokeImg from '../assets/my-movie-imgs/poke-dex-frame.png';
+import karmenImg from '../assets/my-movie-imgs/karmen.png'
+import avisImg from '../assets/my-movie-imgs/avis.png'
 
-const imgArray = [movieImg, pokeImg];
+const imgArray = [movieImg, pokeImg, karmenImg, avisImg];
 
 export default function projectsPresentation() {
     let webProjectsElm = document.createElement("section")
@@ -30,7 +32,16 @@ export default function projectsPresentation() {
         <i class="fa-solid fa-chevron-left"></i>
         <div class=img-container><img class="gallery-img" src=${imgArray[currentImgIndex]} alt="project img"></div>
         <i class="fa-solid fa-chevron-right"></i>
+
+        <div class="backgroundImgs">
+            <div class="backgroundFilter"></div>
+            <img src="${imgArray[currentImgIndex+1]}" alt="project next">
+            <img src="${imgArray[currentImgIndex+2]}" alt="project next">
+        </div>
+
         </article>
+
+       
     `;
 
 

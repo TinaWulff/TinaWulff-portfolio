@@ -11,6 +11,8 @@ import projectsPresentation from './components/dev-projects.js';
 
 import footer from './components/footer.js';
 
+
+
 document.querySelector("#app").append(header());
 
 let mainElm = document.createElement("main");
