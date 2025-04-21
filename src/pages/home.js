@@ -1,0 +1,45 @@
+import '../style/style.scss';
+
+import introDiv from '../components/index.intro.js';
+import profileImg from '../components/profile-picture.js';
+import codeImg from '../components/script-picture.js';
+import headlines from '../components/headlines.js';
+import button from '../components/button.js';
+import competences from '../components/competences-icons.js';
+import projectsPresentation from '../components/dev-projects.js';
+
+
+export default function homePage() {
+    // Opret et fragment for at samle alt indhold
+    const fragment = document.createDocumentFragment();
+
+    // Opret main-elementet og append det til fragmentet
+    const mainElm = document.createElement("main");
+    fragment.append(mainElm);
+
+    // Append alle dine komponenter til mainElm
+    mainElm.append(headlines());
+    mainElm.append(introDiv());
+    mainElm.append(profileImg());
+    mainElm.append(codeImg());
+    mainElm.append(button("Projects"));
+    mainElm.append(competences());
+    mainElm.append(projectsPresentation());
+
+
+    // Returnér fragmentet, så det kan appendes til #app udenfor funktionen
+    return fragment;
+}
+
+
+/*
+NOTER OM BRUG AF FRAGMENT:
+Bedre performance:
+Et fragment forhindrer gentagen reflow og repaint af DOM'en, som sker når du tilføjer eller ændrer indhold én ad gangen.
+
+Renere kode:
+Det giver dig mulighed for at samle flere DOM-operationer i én.
+
+Så for at opsummere:
+Fragment er bare en mellemstation for dit indhold, hvor du kan opbygge det, før du tilføjer det til DOM’en.
+*/

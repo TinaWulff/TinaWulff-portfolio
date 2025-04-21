@@ -1,36 +1,34 @@
-import './style/style.scss';
-
-import header from "./components/header.js";
-import introDiv from './components/index.intro.js';
-import profileImg from './components/profile-picture.js';
-import codeImg from './components/script-picture.js';
-import headlines from './components/headlines.js';
-import button from './components/button.js';
-import competences from './components/competences-icons.js';
-import projectsPresentation from './components/dev-projects.js';
-
+import homePage from './pages/home.js';
+//import aboutPage from './pages/about.js';  // Eksempel på en ny underside
 import footer from './components/footer.js';
+import header from './components/header.js';
 
+const app = document.querySelector("#app");
 
+function renderPage() {
+    app.innerHTML = "";  // Ryd siden
 
-document.querySelector("#app").append(header());
+    // Bestem hvilken side der skal vises, baseret på hash i URL
+    const route = window.location.hash;
 
-let mainElm = document.createElement("main");
-document.querySelector("#app").append(mainElm);
+    // Opret header, afhængigt af om vi er på forsiden
+    const isHome = route === "" || route === "#home";  // Check for forsiden
+    app.append(header(!isHome));  // Hvis det ikke er forsiden, skal headeren have "Forside"-link
 
-mainElm.append(headlines());
+    // Opret main-elementet
+    const mainElm = document.createElement("main");
 
-mainElm.append(introDiv());
+    // Afhængig af route, vis den rette side
+    if (route === "#about") {
+        mainElm.append(aboutPage());
+    } else {
+        mainElm.append(homePage());  // Standard er forsiden
+    }
 
-mainElm.append(profileImg());
+    app.append(mainElm);  // Append main til app
+    app.append(footer());  // Append footer
+}
 
-mainElm.append(codeImg());
-
-mainElm.append(button("Projects"));
-
-mainElm.append(competences());
-
-mainElm.append(projectsPresentation());
-
-
-document.querySelector("#app").append(footer());
+// Kør renderPage() når siden loader, eller når URL ændrer sig
+window.addEventListener("load", renderPage);
+window.addEventListener("hashchange", renderPage);

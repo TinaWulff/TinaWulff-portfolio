@@ -4,10 +4,11 @@
     grid-column: span 3;
     display: grid;
     grid-template-columns: 2.8fr 6fr;
-    margin: 6em 6em 8em;
+    // margin: 6em 6em 8em;
     column-gap: 2em;
     justify-self: center;
-
+    margin-top: 14em;
+    margin-bottom: 7em;
 
     h2 {
         grid-column: 1;
