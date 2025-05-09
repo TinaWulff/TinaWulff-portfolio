@@ -113,7 +113,7 @@
             position: relative;
             grid-column: 2;
             width: 600px;
-            height: 404px;
+            max-height: 404px; //før height
             max-width: 100%;
             display: flex;
             justify-content: center;
@@ -153,7 +153,6 @@
             }
 
             .img-link {
-                // 👈 tilføjet hele dette blok
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -171,7 +170,6 @@
             }
 
             &:hover .img-link {
-                // 👈 tilføjet
                 opacity: 1;
             }
         }
@@ -240,81 +238,95 @@
     }
 }
 
-@media screen and (max-width: 1130px) {
+@media screen and (max-width: 1200px) {
 
+    main {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
 
-    .web-projects-section {
-
-        .project-container {
+        .web-projects-section {
             width: 100%;
-            max-width: 800px;
-            grid-template-columns: 1fr 9fr 1fr;
+            max-width: 100%;
 
-
-            h2 {
-                grid-column: 2/3;
-                margin-bottom: 2em;
-                max-width: 600px;
-
-            }
-
-            .text-content__intro {
-                grid-column: 2/3;
-                grid-row: 2;
-                justify-self: center;
-                margin-bottom: 2em;
-                max-width: 600px;
-            }
-
-            .text-content__projekts {
-
-                max-width: 600px;
-
-                h3 {
-                    margin-bottom: 0.5em;
-                }
-
-                p {
-                    margin-bottom: 1em;
-                }
-
-                grid-row: 4;
-                grid-column: 2/3;
-                justify-self: center;
-                margin-bottom: 3em;
-                line-height: 1;
-            }
-
-            .gallery {
+            .project-container {
                 width: 100%;
-                max-width: 700px;
-                grid-column: span 3;
-                grid-row: 3;
+                max-width: 1100px;
+                grid-template-columns: 1fr 9fr 1fr;
                 justify-self: center;
-                margin-bottom: 3em;
                 column-gap: 0;
 
-                .img-container {
-                    width: 100%;
 
-                    img {
-                        max-width: 100%;
-                        height: auto;
-                    }
+                h2 {
+                    grid-column: 2/3;
+                    margin-bottom: 2em;
+                    max-width: 1100px;
+
                 }
 
+                .text-content__intro {
+                    width: 100%;
+                    max-width: 1100px;
+                    grid-column: 2/3;
+                    grid-row: 2;
+                    justify-self: center;
+                    margin-bottom: 2em;
 
+                }
+
+                .text-content__projekts {
+                    width: 100%;
+                    max-width: 1100px;
+
+                    h3 {
+                        margin-bottom: 0.5em;
+                    }
+
+                    p {
+                        margin-bottom: 1em;
+                    }
+
+                    grid-row: 4;
+                    grid-column: 2/3;
+                    justify-self: center;
+                    margin-bottom: 3em;
+                    line-height: 1;
+                }
+
+                .gallery {
+                    width: 100%;
+                    max-width: 900px;
+                    grid-column: span 3;
+                    grid-row: 3;
+                    justify-self: center;
+                    margin-bottom: 3em;
+                    column-gap: 0;
+
+                    .img-container {
+                        width: 100%;
+
+                        img {
+                            max-width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                    @media (max-width: 1000px) {
+                        width: 100%;
+                        max-width: 700px;
+                    }
+                }
             }
+
         }
     }
-
 }
 
 @media screen and (max-width: 700px) {
 
 
     main {
-        width: 100%;
+        width: 80%;
         max-width: 100%;
         margin-left: 2em;
         margin-right: 2em;
@@ -323,34 +335,68 @@
             column-gap: 0;
 
             padding-top: 4em;
-            margin-bottom: 7em;
+            margin-bottom: 6em;
 
-        .project-container {
-            width: 100%;
-            max-width: 700px;
-           
-
-            h2 {
-                grid-column: span 3;
+            .project-container {
                 width: 100%;
-                max-width: 100%;
+                max-width: 700px;
+
+
+                h2 {
+                    grid-column: span 3;
+                    width: 100%;
+                    max-width: 100%;
+                }
+
+                .text-content__intro {
+                    width: 100%;
+                    max-width: 100%;
+                    grid-column: 1/4
+                }
+
+                .text-content__projekts {
+                    width: 100%;
+                    max-width: 100%;
+                    grid-column: span 3;
+                }
+
+                .gallery {
+                    width: 100%;
+
+                    i {
+                        font-size: 1.5em;
+                    }
+                }
+
             }
 
-            .text-content__intro {
-                width: 100%;
-                max-width: 100%;
-                grid-column: 1/4
+
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+
+        main {
+            width: 90%;
+            max-width: 100%;
+            margin-left: 1em;
+            margin-right: 1em;
+
+
+            .img-container {
+                height: 250px;
+                height: auto;
             }
 
-            .text-content__projekts {
-                width: 100%;
-                max-width: 100%;
-                grid-column: span 3;
-            }
         }
 
+        footer {
+
+            .contact-info {
+                margin-left: 1em;
+            }
+
+        }
 
     }
-}
-
 }

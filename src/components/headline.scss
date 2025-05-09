@@ -65,3 +65,22 @@ h1 {
         }
     
     }
+
+
+    @media screen and (max-width: 450px) {
+
+        .headlines {
+            display: grid;
+        }
+
+        h1 {
+            font-size: 24px;
+            justify-self: center;
+        }
+        
+        
+        .name {
+            font-size: 42px;
+        }
+
+    }

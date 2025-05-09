@@ -11,4 +11,27 @@
     font-size: 2.5em;
     justify-self: center;
     text-align: center;
+
+    @media (max-width: 925px) {
+        grid-column: 2/4;
+        grid-row: 3;
+    }
+}
+
+// @media (max-width: 925px) {
+    
+//     .competences-icons {
+//     grid-column: 2/4;
+//     grid-row: 3;
+//     }
+
+// }
+
+@media screen and (max-width: 450px) {
+
+    .competences-icons {
+        font-size: 1.5em;
+        margin-top: 2.5em;
+    }
+
 }

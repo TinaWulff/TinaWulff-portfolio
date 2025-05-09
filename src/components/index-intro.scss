@@ -7,6 +7,7 @@
 .intro-div {
     width: 100%;
     //max-width: 40%;
+    max-width: 100%;
     font-size: 16px;
     grid-column: 1;
     font-family: "inter Sans", sans-serif;
@@ -19,6 +20,23 @@
     justify-self: center;
     
 
+    @media (max-width: 700px) {
+        grid-column: 2/4;
+        text-align: right;
+        margin: unset;
+        margin-left: 4em;
+        margin-right: 0;
+        padding-right: 0;
+
+
+        &:hover {
+            &:hover {
+                scale: unset;
+                overflow: unset;
+            }
+        }
+    }
+
     p {
     margin: 0.6em 0;
     }
@@ -30,6 +48,7 @@
 
     &:hover {
         scale: 1.15;
+        overflow: hidden;
     }
 
     a {
@@ -49,5 +68,43 @@
         color: $cv-color;
         font-size: 18px;
     }
+
+}
+
+
+@media screen and (max-width: 450px) {
+
+
+    .intro-div {
+        margin-top: 3em;
+        grid-row: 4;
+        grid-column: 1/4;
+        font-style: normal;
+        font-weight: 600;
+    }
+
+
+    .competences-icons {
+        grid-row: 6;
+        grid-column: 2/4;
+        justify-self: flex-end;
+        font-size: 1em;
+        
+    }
+
+
+    .link-button {
+        grid-row: 6;
+        grid-column: 1;
+        display: none;
+        margin-left: 1em;
+    }
+
+    .profile-img {
+        grid-row: 3;
+        scale: 1.2;
+        overflow: hidden;
+    }
+
 
 }
