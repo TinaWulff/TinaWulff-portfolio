@@ -1,0 +1,39 @@
+
+.introSection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+
+
+    .headlines {
+        grid-column: span 2;
+        grid-row: 1;
+        grid-template-rows: repeat(1fr, auto);
+        margin-top: 1em;
+    }
+
+
+    .code-img {
+        grid-column: 2/4;
+        overflow: hidden;
+        grid-row: 2/5;
+    }
+    
+    .profile-img {
+        grid-column: 3;
+    }
+
+    .intro-div{
+        grid-column: 1;
+    }
+
+    .competences-icons {
+        grid-column: 1;
+    }
+    
+    .link-button {
+        grid-column: 1;
+    }
+
+}
+

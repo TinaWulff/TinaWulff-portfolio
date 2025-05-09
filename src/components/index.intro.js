@@ -17,8 +17,13 @@ export default function introDiv() {
     <p>This portfolio showcases my skills and ongoing projects,
         which will continuously be expanding as i evolve my knowlegde.</p>
 
-    <p class="read-more">...Read more <a href="#">about me </a><i class="fa-solid fa-angle-right"></i></p>
+    <p class="read-cv blue">..Read more about my experience in my CV</p>
+    <a href="/path/to/file.pdf" download="TinaWulff-CV.pdf">download CV as PDF here </a><i class="fa-solid fa-angle-right"></i>
     `
 
     return introDivElm
 }
+
+/*
+<p class="read-more">...Read more <a href="#">about me </a><i class="fa-solid fa-angle-right"></i></p>
+*/

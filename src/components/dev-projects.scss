@@ -1,3 +1,4 @@
+@use '../style/colors' as *;
 
 .web-projects-section {
 
@@ -5,13 +6,14 @@
     display: grid;
     grid-template-columns: 2.8fr 6fr;
     // margin: 6em 6em 8em;
-    column-gap: 2em;
+    column-gap: 4em;
     justify-self: center;
-    margin-top: 14em;
-    margin-bottom: 7em;
+    padding-top: 12em;
+    margin-bottom: 15em;
+
 
     h2 {
-        grid-column: 1;
+        grid-column: 1/2;
         font-size: 24px;
         background-color: #F0BA87; //$web-color
         width: 100%;
@@ -21,19 +23,27 @@
         align-items: center;
         color: #000;
         justify-self: center;
-        margin-top: 3em;
+        margin-bottom: 3em;
+        //margin-top: 3em;
         // width: fit-content;
     }
 
-    .text-content {
-        grid-column: 1;
-        margin-top: 3em;
 
-        h3 {
-            color: #F0BA87; 
-            margin-top: 2em;
-            margin-bottom: 0.5em;
-        }
+    .text-content__intro {
+        grid-column: 2/3;
+        grid-row: 1;
+        margin-bottom: 3em;
+        max-width: 600px;
+        justify-self: center;
+        font-size: 14px;
+        font-family: "inter";
+        //margin-top: 3em;
+
+        // h3 {
+        //     color: #F0BA87; 
+        //     //margin-top: 2em;
+        //     margin-bottom: 0.5em;
+        // }
 
         p {
             margin-bottom: 1em;
@@ -44,6 +54,49 @@
             margin-top: 1em;
         }
     }
+
+
+    .project-container {
+        display: grid;
+        grid-row: 2;
+        grid-column: span 2;
+        column-gap: 4em;
+
+
+        .text-content__projekts {
+
+            grid-column: 1;
+            grid-row: 2;
+            align-self: center;
+
+            h3 {
+                margin-bottom: 1em;
+                font-size: 22px;
+                color: $cv-color;
+            }
+
+            h4 {
+                font-size: 18px;
+            }
+
+            p {
+                margin-bottom: 2em;
+                font-family: "inter Sans", sans-serif;
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            a {
+                font-family: "inter Sans", sans-serif;
+                font-size: 16px;
+                line-height: 1.5;
+                margin-bottom: 1em;
+            }
+
+        }
+
+    }
+
 
     .gallery {
         grid-column: 2;
@@ -57,6 +110,7 @@
 
 
         .img-container {
+            position: relative;
             grid-column: 2;
             width: 600px;
             height: 404px;
@@ -64,22 +118,69 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0);
+                /* ingen mørke-overlay som standard */
+                //transition: background-color 0.3s ease;
+                pointer-events: none;
+                z-index: 1;
+            }
+
+            &:hover img {
+                filter: blur(2px);
+            }
+
+            // &:hover::after {
+
+            //     background-color: rgba(0, 0, 0, 0.4);
+            // }
+
             img {
                 max-width: 100%;
+                position: relative;
+                z-index: 0;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .img-link {
+                // 👈 tilføjet hele dette blok
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                color: white;
+                font-size: 1.2rem;
+                text-decoration: none;
+                background: #262535a3;
+                padding: 0.5em 1em;
+                border-radius: 5px;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                text-align: center;
+            }
+
+            &:hover .img-link {
+                // 👈 tilføjet
+                opacity: 1;
             }
         }
 
+
+        .fa-chevron-right,
         .fa-chevron-left {
-            grid-column: 1;
-        }
-
-        .fa-chevron-right {
-            grid-column: 3;
-        }
-
-        .fa-chevron-right, .fa-chevron-left {
             font-size: 42px;
+            position: absolute;
 
             &:hover {
                 cursor: pointer;
@@ -87,11 +188,34 @@
 
         }
 
+        .fa-chevron-left {
+            grid-column: 1;
+            justify-self: start;
+        }
+
+        .fa-chevron-right {
+            grid-column: 3;
+            justify-self: end;
+        }
+
+
+
 
         .backgroundImgs {
             order: -1;
             grid-column: 2;
+
             margin-bottom: 5em; //hvor meget der rykkes ned så man kan se baggrundsbilledet/næste billede
+
+            .third-img {
+                position: absolute;
+                bottom: 5em;
+            }
+
+            .second-img {
+                position: absolute; //virker mærkeligt
+                bottom: 10em;
+            }
 
             .backgroundFilter {
                 background-color: #262535b9;
@@ -102,16 +226,131 @@
                 right: 20%;
                 z-index: -1;
             }
-            
-        img {
-            width: 490px;
-            max-width: 100%;
-            position: absolute;
-            z-index: -2;
-            right: 20%;
+
+            img {
+                width: 490px;
+                max-width: 100%;
+                position: absolute;
+                z-index: -2;
+                right: 20%;
+            }
         }
-        }
-        
+
 
     }
+}
+
+@media screen and (max-width: 1130px) {
+
+
+    .web-projects-section {
+
+        .project-container {
+            width: 100%;
+            max-width: 800px;
+            grid-template-columns: 1fr 9fr 1fr;
+
+
+            h2 {
+                grid-column: 2/3;
+                margin-bottom: 2em;
+                max-width: 600px;
+
+            }
+
+            .text-content__intro {
+                grid-column: 2/3;
+                grid-row: 2;
+                justify-self: center;
+                margin-bottom: 2em;
+                max-width: 600px;
+            }
+
+            .text-content__projekts {
+
+                max-width: 600px;
+
+                h3 {
+                    margin-bottom: 0.5em;
+                }
+
+                p {
+                    margin-bottom: 1em;
+                }
+
+                grid-row: 4;
+                grid-column: 2/3;
+                justify-self: center;
+                margin-bottom: 3em;
+                line-height: 1;
+            }
+
+            .gallery {
+                width: 100%;
+                max-width: 700px;
+                grid-column: span 3;
+                grid-row: 3;
+                justify-self: center;
+                margin-bottom: 3em;
+                column-gap: 0;
+
+                .img-container {
+                    width: 100%;
+
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+
+    main {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 2em;
+        margin-right: 2em;
+
+        .web-projects-section {
+            column-gap: 0;
+
+            padding-top: 4em;
+            margin-bottom: 7em;
+
+        .project-container {
+            width: 100%;
+            max-width: 700px;
+           
+
+            h2 {
+                grid-column: span 3;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .text-content__intro {
+                width: 100%;
+                max-width: 100%;
+                grid-column: 1/4
+            }
+
+            .text-content__projekts {
+                width: 100%;
+                max-width: 100%;
+                grid-column: span 3;
+            }
+        }
+
+
+    }
+}
+
 }

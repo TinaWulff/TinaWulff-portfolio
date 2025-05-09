@@ -1,4 +1,5 @@
 import '../style/style.scss';
+import './home.scss';
 
 import introDiv from '../components/index.intro.js';
 import profileImg from '../components/profile-picture.js';
@@ -14,22 +15,34 @@ export default function homePage() {
     const fragment = document.createDocumentFragment();
 
     // Opret main-elementet og append det til fragmentet
-    const mainElm = document.createElement("main");
-    fragment.append(mainElm);
+    const sectionIntroElm = document.createElement("section");
+    sectionIntroElm.className = "introSection";
+    fragment.append(sectionIntroElm);
 
     // Append alle dine komponenter til mainElm
-    mainElm.append(headlines());
-    mainElm.append(introDiv());
-    mainElm.append(profileImg());
-    mainElm.append(codeImg());
-    mainElm.append(button("Projects"));
-    mainElm.append(competences());
-    mainElm.append(projectsPresentation());
+    sectionIntroElm.append(headlines());
+    sectionIntroElm.append(introDiv());
+    sectionIntroElm.append(profileImg());
+    sectionIntroElm.append(codeImg());
+    sectionIntroElm.append(button("Projects"));
+    sectionIntroElm.append(competences());
 
+    const sectionProjectsElm = document.createElement("section");
+    sectionProjectsElm.append(projectsPresentation());
+    fragment.append(sectionProjectsElm);
 
     // Returnér fragmentet, så det kan appendes til #app udenfor funktionen
     return fragment;
 }
+
+
+
+
+
+
+
+
+
 
 
 /*

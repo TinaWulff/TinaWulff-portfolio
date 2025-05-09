@@ -7,11 +7,14 @@ export default function headlines() {
     headlinesElm.className="headlines"
 
     headlinesElm.innerHTML = `
-        <h2><span class="purple">Welcome</span> to my <span class="pink">portfolio!</span></h2>
-        <h1>I am <span class="name">Tina Wulff</span> - the next new,<br>
-            but <span class="orange">“not so typical”</span><br>
-            <span class="pink">web-developer..</span></h1>
+        
+        <h1>I am <span class="name">Tina Wulff</h1>
+        <h2> < the next new
+            <span class="purple"></span> <span class="green">// but not so typical</span>
+            <span class="blue">web-developer ></span></h2>
     `
 
     return headlinesElm
 }
+
+//<h2><span class="purple">Welcome</span> to my <span class="pink">portfolio!</span></h2>

@@ -1,7 +1,7 @@
 
 
 .profile-img {
-    width: 25%;
+    width: 330px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     transform: scaleX(-1);
@@ -10,8 +10,8 @@
     grid-column: 3;
     justify-self: end;
     position: absolute;
-    top: 130px;
-    right: 6%;
+    top: 160px;
+    right: 12%;
     border: solid 1px #7BAFEE; //$cv-color
     box-shadow: 0px 0px 80px 2px #7BAFEE;
     
@@ -23,10 +23,10 @@
 }
 
 
-@media screen and (max-width: 1300px) {
+// @media screen and (max-width: 1300px) {
 
-    .profile-img {
-        width: 28%;
-        }
+//     .profile-img {
+//         width: 28%;
+//         }
     
-    }
+//     }

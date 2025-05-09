@@ -4,25 +4,31 @@
 
 
 .headlines {
-    color: $cv-color;
-    grid-column: span 2;
+    color: $web-color;
+    grid-column: 1;
     font-family: "Ubuntu", sans-serif;
+    //margin-top: 5em;
 }
 
 h2 {
-    font-size: 56px;
+    font-size: 24px;
     font-weight: 400;
-    margin-bottom: 0.5em;
-    margin-top: 0.4em;
+    margin-bottom: 1em;
+    margin-top: 0em;
+    grid-column: 1;
 
-    @media screen and (max-width: 1300px) {
-        font-size: 42px;
-    }
+    // @media screen and (max-width: 1300px) {
+    //     font-size: 42px;
+    // }
 }
 
 h1 {
-    font-size: 46px;
+    // font-size: 56px;
     font-weight: 400;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    //text-align: center;
+    justify-self: center;
 
         @media screen and (max-width: 1300px) {
         font-size: 32px;
@@ -41,11 +47,15 @@ h1 {
 
 .name {
     color: #dedfe0;
-    font-size: 52px;
+    font-size: 56px;
 }
 
 .purple {
     color: $about-color;
+}
+
+.green {
+    color: $fineart-color;
 }
 
 @media screen and (max-width: 1300px) {

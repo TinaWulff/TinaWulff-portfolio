@@ -1,22 +1,23 @@
-
+@use '../style/colors' as *;
 
 .link-button {
 grid-column: 1;
-margin: 2.5em 0;
+margin: 2em 0;
 justify-self: center;
 
-background-color: #262535;
-color:  #7BAFEE;
-border: 1px solid  #7BAFEE;
-box-shadow: 0px 2px 5px 2px #7BAFEE;
-padding: 0.5em 3.5em;
+background-color: $background-dark;
+color:  $web-color;
+border: 3px solid  $web-color;
+box-shadow: 0px 2px 20px 2px $web-color;
+padding: 0.5em 3em;
 width: fit-content;
-border-radius: 5px;
+border-radius: 10px;
+height: 3em;
 
     &:hover {
     cursor: pointer;
-    background-color: #7BAFEE;
-    color:  #262535;
+    background-color: $cv-color;
+    color:  $background-dark;
     box-shadow: none;
     transform: scale(1.1); 
     transition: transform 0.3s ease-in;

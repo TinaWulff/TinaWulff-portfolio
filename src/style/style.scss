@@ -3,6 +3,7 @@
 @use 'colors' as *;
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 $font-stack: "Fira Code", monospace;
 
@@ -12,6 +13,11 @@ $font-stack: "Fira Code", monospace;
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: unset;
+}
+
 header {
     font-family: $font-stack;
 }
@@ -19,21 +25,28 @@ header {
 button {
     font-family: $font-stack;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 body {
     background-color: $background-dark;
     font-family: $font-stack;
     color: $text-dark;
+    max-width: 1400px;
+    max-width: 100%;
 }
 
 main {
-    max-width: 100%;
-    margin: 0 4em;
 
+    max-width: 80%;
+    margin: 0 auto;
+    //margin: 0 4em;
     // display: grid;
     // grid-template-columns: repeat(3, 1fr);
 }
+
+
+
+
 
 

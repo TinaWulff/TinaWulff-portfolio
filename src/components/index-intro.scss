@@ -1,4 +1,4 @@
-
+@use '../style/colors' as *;
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
@@ -6,7 +6,7 @@
 
 .intro-div {
     width: 100%;
-    max-width: 70%;
+    //max-width: 40%;
     font-size: 16px;
     grid-column: 1;
     font-family: "inter Sans", sans-serif;
@@ -15,11 +15,17 @@
     font-weight: 500;
     line-height: 150%;
     // margin-left: 2em;
-    margin: 3em 0 1em;
+    margin: 3em 1em 2em;
     justify-self: center;
+    
 
     p {
     margin: 0.6em 0;
+    }
+
+    .read-cv {
+        margin-top: 1em;
+        line-height: 1;
     }
 
     &:hover {
@@ -27,7 +33,11 @@
     }
 
     a {
-        color: #8E84D9; //about-color
+        color: $cv-color; //about-color
+        font-style: normal;
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: none;
 
     
     &:hover {
@@ -36,7 +46,8 @@
     }
 
     .fa-angle-right {
-        color: #8E84D9;
+        color: $cv-color;
+        font-size: 18px;
     }
 
 }
