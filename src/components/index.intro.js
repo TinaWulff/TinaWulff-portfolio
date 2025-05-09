@@ -18,7 +18,7 @@ export default function introDiv() {
         which will continuously be expanding as i evolve my knowlegde.</p>
 
     <p class="read-cv blue">..Read more about my experience in my CV</p>
-    <a href="/path/to/file.pdf" download="TinaWulff-CV.pdf">download CV as PDF here </a><i class="fa-solid fa-angle-right"></i>
+    <a href="/path/to/file.pdf" download="TinaWulff-CV.pdf">Download CV (Danish) as PDF here </a><i class="fa-solid fa-angle-right"></i>
     `
 
     return introDivElm
