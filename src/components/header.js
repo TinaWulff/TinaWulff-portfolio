@@ -1,5 +1,6 @@
 import "../components/header.scss"
 import logoWhite from "../assets/logo-white.png"
+import CV from '../assets/TinaWulff-CV.pdf';
 
 export default function header() {
     let headerElm = document.createElement("header")
@@ -23,7 +24,7 @@ export default function header() {
             <a href="#web-development"><li class="web">Web-development</li></a>
             <li class="ux">UX / UI</li>
             <a href="http://tinawulff.dk/" target="_blank"><li class="art">Fine Art</li></a>
-            <a href="/path/to/file.pdf" target="_blank" rel="noopener" download="TinaWulff-CV.pdf"><li class="cv">Curriculum</li></a>
+            <a href="${CV}" target="_blank" rel="noopener" download="TinaWulff-CV.pdf"><li class="cv">Curriculum</li></a>
             <a href="#footer"><li class="me">Contact</li></a>
         </ul>
         <!-- <div class="underline"></div> -->
