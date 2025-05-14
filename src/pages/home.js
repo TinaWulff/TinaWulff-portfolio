@@ -8,6 +8,7 @@ import headlines from '../components/headlines.js';
 import button from '../components/button.js';
 import competences from '../components/competences-icons.js';
 import projectsPresentation from '../components/dev-projects.js';
+import uxProject from '../components/ux-section.js';
 
 
 export default function homePage() {
@@ -27,9 +28,13 @@ export default function homePage() {
     sectionIntroElm.append(button("Projects"));
     sectionIntroElm.append(competences());
 
-    const sectionProjectsElm = document.createElement("section");
-    sectionProjectsElm.append(projectsPresentation());
-    fragment.append(sectionProjectsElm);
+    // const sectionProjectsElm = document.createElement("section");
+
+    fragment.append(projectsPresentation());
+    //fragment.append(sectionProjectsElm);
+
+    fragment.append(uxProject());
+
 
     // Returnér fragmentet, så det kan appendes til #app udenfor funktionen
     return fragment;
