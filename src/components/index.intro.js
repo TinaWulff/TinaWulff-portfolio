@@ -1,5 +1,6 @@
 
 import "./index-intro.scss";
+import CV from '../assets/TinaWulff-CV.pdf';
 
 
 
@@ -18,7 +19,7 @@ export default function introDiv() {
         which will continuously be expanding as i evolve my knowlegde.</p>
 
     <p class="read-cv blue">..Read more about my experience in my CV</p>
-    <a href="../assets/TinaWulff-CV.pdf" download="TinaWulff-CV.pdf">Download CV (Danish) as PDF here </a><i class="fa-solid fa-angle-right"></i>
+    <a href="${CV}" download="TinaWulff-CV.pdf">Download CV (Danish) as PDF here </a><i class="fa-solid fa-angle-right"></i>
     `
 
     return introDivElm
