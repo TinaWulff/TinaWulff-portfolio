@@ -13,7 +13,7 @@ const projectTexts = [
     {
         projectname: "Newsify",
         description: "News app, to show you the latest and most popular news from The New York Times website, you can save the links you want for later in the Archive-page.",
-        technologies: "Javascript, Vite, SCSS, HTML5",
+        technologies: "Javascript, Vite, SCSS, HTML5, REST API",
         links: {
             github: "https://github.com/rts-cmk-wu13/projekt-newsify-TinaWulff",
             webpage: "newsify-tina.netlify.app",
@@ -22,7 +22,7 @@ const projectTexts = [
     {
         projectname: "MyMovie",
         description: "Movie App, to check out the latest and most popular movies right now and bookmark your favorites, to check them out later. Read about the movies and watch movie-trailers.",
-        technologies: "Javascript, Vite, SCSS, HTML5",
+        technologies: "Javascript, Vite, SCSS, HTML5 REST API",
         links: {
             github: "https://github.com/rts-cmk-wu13/mymovie-TinaWulff",
             webpage: "movie-site-tina.netlify.app",
@@ -31,7 +31,7 @@ const projectTexts = [
     {
         projectname: "Poke-dex",
         description: "Poke-dex app, to check out all the pokemons and read about them.",
-        technologies: "Javascript, Vite, SCSS, HTML5",
+        technologies: "Javascript, Vite, SCSS, HTML5, REST API",
         links: {
             github: "https://github.com/rts-cmk-wu13/pokedex-TinaWulff",
             webpage: "tinas-pokedex-site.netlify.app",
@@ -64,7 +64,7 @@ export default function projectsPresentation() {
                 <h4>Technologies:</h4>
                 <p>${project.technologies}</p>
                 <h4>Links:</h4>
-                <a href="${project.links.github}" target="_blank">GitHub</a>
+                <a href="${project.links.github}" target="_blank">GitHub</a><br>
                 <a href="https://${project.links.webpage}" target="_blank">Project webpage (made mobile-first)</a>
             </div>
 

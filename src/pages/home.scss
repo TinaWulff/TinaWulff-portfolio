@@ -15,7 +15,7 @@ main {
 
 
     .introSection {
-        width: 100%;
+        width: 90%;
         max-width: 100%;
         
         display: grid;
@@ -66,7 +66,8 @@ main {
 
         .link-button {
             grid-column: 1;
-
+            text-decoration: none;
+            
             @media (max-width: 925px) {
                 grid-column: 1;
                 align-self: center;
@@ -82,11 +83,12 @@ main {
 
     .introSection {
         margin: 0 4em;
+        max-width: 90%;
 
         .intro-div {
             margin-right: 3em;
             margin-left: 3em;
-            padding-right: 2em;
+            //padding-right: 2em;
         }
     }
 
@@ -130,8 +132,5 @@ main {
     grid-row: 6;
     grid-column: 1;
 }
-
-
-
 
  }

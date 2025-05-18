@@ -6,23 +6,27 @@
     align-items: end;
 
     margin: 0;
-    padding: 0;
+    padding-top: 11em;
 
     .header-icons {
         list-style: none;
         display: flex;
-        gap: 1em;
+        gap: 2em;
         justify-content: center;
-        margin-top: 3em;
+        margin-top: 10em;
 
         i {
-            font-size: 1.5em;
+            font-size: 3em;
         }
     }
 
     .contact-info {
-        margin-bottom: 4em;
+        margin-bottom: 12em;
         line-height: 2;
+
+        p {
+            font-size: 24px;
+        }
     }
 
     .profile-pixel {
@@ -33,4 +37,15 @@
    
     }
 
+}
+
+@media screen and (max-width: 450px) {
+
+footer {
+
+    .contact-info {
+        margin-left: 1em;
+    }
+
+}
 }

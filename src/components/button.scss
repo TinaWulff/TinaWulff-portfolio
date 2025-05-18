@@ -6,6 +6,9 @@ grid-row: 3;
 margin: 2em 0;
 justify-self: center;
 
+display: flex;
+align-items: center;
+
 background-color: $background-dark;
 color:  $web-color;
 border: 3px solid  $web-color;
@@ -54,3 +57,9 @@ height: 3em;
 }
 
 
+@media screen and (max-width: 450px) {
+  
+  .link-button {
+    display: none;
+  }
+}

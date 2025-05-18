@@ -25,7 +25,7 @@ export default function homePage() {
     sectionIntroElm.append(introDiv());
     sectionIntroElm.append(profileImg());
     sectionIntroElm.append(codeImg());
-    sectionIntroElm.append(button("Projects"));
+    sectionIntroElm.append(button("Projects", "#web-development"));
     sectionIntroElm.append(competences());
 
     // const sectionProjectsElm = document.createElement("section");

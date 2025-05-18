@@ -24,7 +24,7 @@ export default function header() {
             <a href="#web-development"><li class="web">Web-development</li></a>
             <a href="#ux-section"><li class="ux">UX / UI</li></a>
             <a href="http://tinawulff.dk/" target="_blank"><li class="art">Fine Art</li></a>
-            <a href="${CV}" target="_blank" rel="noopener" download="TinaWulff-CV.pdf"><li class="cv">CV (Download PDF)</li></a>
+            <a href="${CV}" target="_blank" rel="noopener" download="TinaWulff-CV.pdf"><li class="cv">CV (Download)</li></a>
             <a href="#footer"><li class="me">Contact</li></a>
         </ul>
         <!-- <div class="underline"></div> -->

@@ -1,13 +1,17 @@
 
 import './button.scss'
 
-export default function button(buttonLink) {
-    let buttonElm = document.createElement("button")
-    buttonElm.className="link-button"
-
-    buttonElm.innerHTML = `
-        ${buttonLink}
-    `
+export default function button(buttonTXT, href) {
+    let buttonElm = document.createElement("a")
+    buttonElm.className="link-button";
+    buttonElm.href= `${href}`;
+    buttonElm.textContent=`${buttonTXT}`;
 
     return buttonElm
 }
+
+
+    // buttonElm.innerHTML = `
+    //     ${buttonTXT}
+    // `
+

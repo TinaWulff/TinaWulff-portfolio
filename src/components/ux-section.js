@@ -11,8 +11,11 @@ export default function uxProject() {
         <h2>UX / UI Design</h2>
 
         <div class="ux-introText">
-            <p>In 2024 i did additional studies in UX / UI & Graphical design. The exam project was to make a new web-design, based on an existing website. This insluded UX research and testing.</p>
-            <p>Contact me for further information about what i can offer you according to this field. </p>    
+            <p>In 2024, I completed additional studies in UX/UI and graphic design.
+                <p>The exam project involved creating a new web design based on an existing website.
+                This included UX research and user testing.</p>
+
+Contact me for more information about what I can offer in this field. </p>    
         </div>
         
         

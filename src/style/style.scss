@@ -15,15 +15,12 @@ $font-stack: "Fira Code", monospace;
     //outline: 1px solid red;
 }
 
-html {
-    scroll-behavior: smooth;
-}
 
  html, body {
      overflow-x: hidden;
    }
 
-a {
+ul a {
     text-decoration: none;
     color: unset;
 }
