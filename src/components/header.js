@@ -1,6 +1,6 @@
 import "../components/header.scss"
 import logoWhite from "../assets/logo-white.png"
-import CV from '../assets/TinaWulff-CV.pdf';
+import CV from '../assets/TinaWulff-CV2026.pdf';
 
 export default function header() {
     let headerElm = document.createElement("header")

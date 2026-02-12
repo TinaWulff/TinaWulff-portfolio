@@ -4,15 +4,17 @@ import "./dev-projects.scss";
 import newsifyImg from '../assets/project-imgs/newsify.png';
 import movieImg from '../assets/project-imgs/front-project.png';
 import pokeImg from '../assets/project-imgs/poke-dex-frame.png';
+import kontorassistancenImg from '../assets/project-imgs/kontorassistancen-web.png';
+
 //import karmenImg from '../assets/project-imgs/karmen.png';
 //import avisImg from '../assets/project-imgs/avis.png';
 
-const imgArray = [newsifyImg, movieImg, pokeImg];
-const projectLinks = ["newsify-tina.netlify.app", "movie-site-tina.netlify.app", "tinas-pokedex-site.netlify.app"];
+const imgArray = [newsifyImg, movieImg, pokeImg, kontorassistancenImg];
+const projectLinks = ["newsify-tina.netlify.app", "movie-site-tina.netlify.app", "tinas-pokedex-site.netlify.app", "kontorassistancen.dk"];
 const projectTexts = [
     {
         projectname: "Newsify",
-        description: "News app, to show you the latest and most popular news from The New York Times website, you can save the links you want for later in the Archive-page.",
+        description: "News app made in 2025, to show you the latest and most popular news from The New York Times website, you can save the links you want for later in the Archive-page.",
         technologies: "Javascript, Vite, SCSS, HTML5, REST API",
         links: {
             github: "https://github.com/rts-cmk-wu13/projekt-newsify-TinaWulff",
@@ -21,7 +23,7 @@ const projectTexts = [
     },
     {
         projectname: "MyMovie",
-        description: "Movie App, to check out the latest and most popular movies right now and bookmark your favorites, to check them out later. Read about the movies and watch movie-trailers.",
+        description: "Movie App made in 2025, to check out the latest and most popular movies right now and bookmark your favorites, to check them out later. Read about the movies and watch movie-trailers.",
         technologies: "Javascript, Vite, SCSS, HTML5 REST API",
         links: {
             github: "https://github.com/rts-cmk-wu13/mymovie-TinaWulff",
@@ -30,11 +32,20 @@ const projectTexts = [
     },
     {
         projectname: "Poke-dex",
-        description: "Poke-dex app, to check out all the pokemons and read about them.",
+        description: "Poke-dex app made in 2025, to check out all the pokemons and read about them.",
         technologies: "Javascript, Vite, SCSS, HTML5, REST API",
         links: {
             github: "https://github.com/rts-cmk-wu13/pokedex-TinaWulff",
             webpage: "tinas-pokedex-site.netlify.app",
+        },
+    },
+        {
+        projectname: "Kontorassistancen",
+        description: "Website made in 2025 for the company Kontorassistancen, which offers accounting and office assistance. This project is a full webpage design and development, i did all the content in this page, except creating the photos.",
+        technologies: "React, Vite, SCSS, UX/UI Webdesign, content creation",
+        links: {
+            github: "https://github.com/TinaWulff/kontorassistancen",
+            webpage: "kontorassistancen.dk",
         },
     },
 ]
