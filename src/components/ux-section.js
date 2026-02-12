@@ -1,5 +1,5 @@
 
-import uxImage from '../assets/project-imgs/ux-image.png';
+import uxImage from '../assets/project-imgs/UX-img-ny.png';
 import "./ux-section.scss";
 
 export default function uxProject() {
