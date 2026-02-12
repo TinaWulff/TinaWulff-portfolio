@@ -76,7 +76,7 @@ export default function projectsPresentation() {
                 <p>${project.technologies}</p>
                 <h4>Links:</h4>
                 <a href="${project.links.github}" target="_blank">GitHub</a><br>
-                <a href="https://${project.links.webpage}" target="_blank">Project webpage (made mobile-first)</a>
+                <a href="https://${project.links.webpage}" target="_blank">Project link</a>
             </div>
 
             <article class="gallery">

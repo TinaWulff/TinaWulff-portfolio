@@ -27,6 +27,7 @@ h1 {
     font-weight: 400;
     margin-top: 3em;
     margin-bottom: 1em;
+    margin-right: 1em;
     //text-align: center;
     justify-self: center;
 
@@ -66,8 +67,19 @@ h1 {
     
     }
 
-
     @media screen and (max-width: 450px) {
+
+        .introSection {
+
+            h1 {
+                margin-top: 0;
+            }
+
+            // .profile-img {
+            //     right: unset;
+            //     top: 170px;
+            // }
+        }
 
         .headlines {
             display: grid;
@@ -79,8 +91,8 @@ h1 {
         }
         
         
-        .name {
-            font-size: 42px;
-        }
+        // .name {
+        //     // font-size: 42px;
+        // }
 
     }

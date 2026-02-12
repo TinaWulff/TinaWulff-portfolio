@@ -1,5 +1,6 @@
 
 import './competences-icons.scss'
+import nextLogo from '../assets/nextjs.png';
 
 export default function competences() {
     let competencesElm = document.createElement("div")
@@ -8,7 +9,7 @@ export default function competences() {
     competencesElm.innerHTML = `
     
     <i class="fa-brands fa-html5"></i>
-    <i class="fa-brands fa-css3-alt"></i>
+    <img src=${nextLogo} alt="Next.js logo">
     <i class="fa-brands fa-square-js"></i>
    
     <i class="fa-brands fa-sass"></i>

@@ -14,6 +14,9 @@
     width: 100%;
     max-width: 100%;
 
+    padding-left: 6em;
+    padding-right: 6em;
+
 
     h2 {
         grid-column: 1/2;
@@ -257,6 +260,7 @@
         .web-projects-section {
             width: 100%;
             max-width: 100%;
+            grid-template-columns: unset;
 
             .project-container {
                 width: 100%;
@@ -264,7 +268,6 @@
                 grid-template-columns: 1fr 9fr 1fr;
                 justify-self: center;
                 column-gap: 0;
-
 
                 h2 {
                     grid-column: 2/3;
@@ -337,16 +340,14 @@
 
 
     main {
-        width: 80%;
+        width: 100%;
         max-width: 100%;
-        margin-left: 2em;
-        margin-right: 2em;
+        // margin-left: 2em;
+        // margin-right: 2em;
 
         .web-projects-section {
             column-gap: 0;
-
-            padding-top: 10em;
-            margin-bottom: 6em;
+            padding: 6em 1em;;
 
             .project-container {
                 width: 100%;
@@ -388,7 +389,6 @@
     @media screen and (max-width: 450px) {
 
         main {
-            width: 90%;
             max-width: 100%;
             margin-left: 1em;
             margin-right: 1em;
@@ -396,6 +396,7 @@
 
             .web-projects-section {
                 margin-bottom: 2em;
+                padding-bottom: 2em;
 
             .img-container {
                 height: 250px;

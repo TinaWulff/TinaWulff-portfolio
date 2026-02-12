@@ -6,7 +6,7 @@ header {
     display: grid;
     //grid-template-columns: 2fr 2fr 1.8fr;
     grid-template-columns: 1fr;
-    justify-self: center;
+    // justify-self: center;
     margin: 2em auto;
 
     ul {
@@ -68,7 +68,7 @@ header {
 
             max-width: 100%;
             display: grid;
-            grid-template-columns: repeat(5, auto);
+            grid-template-columns: repeat(5, 1fr);
             gap: 1em;
             padding-bottom: 1em;
             color: #000;
@@ -82,8 +82,8 @@ header {
             box-shadow: 0px 0px 100px 2px #7BAFEE;
 
             li {
-                padding: 0.4em 0;
-                width: 13em;
+                padding: 0.4em 1em;
+                width: 100%;
                 display: flex;
                 justify-content: center;
                 font-size: 14px;
@@ -127,8 +127,48 @@ header {
 
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
     header {
-        display: none;
+        .menu {
+            ul.menu-items {
+
+                  justify-self: center;
+
+                li {
+                    padding: 0.4em 0.3em;
+                    font-size: 12px;
+                  
+                }
+            }
+        }
     }
 }
+
+@media screen and (max-width: 700px) {
+
+    header {
+        .menu {
+            margin-top: 0em;
+            ul.menu-items {
+                width: 100%;
+                height: 65px;
+                justify-self: center;
+                bottom: 0;
+                // display: flex;
+
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+
+                li {
+                    padding: 0.2em 0.2em;
+                    height: 35px;
+                    font-size: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-self: center;
+                }
+            }
+        }
+    }
+}
+
