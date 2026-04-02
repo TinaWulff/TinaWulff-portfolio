@@ -10,8 +10,8 @@ export default function headlines() {
         
         <h1>I am <span class="name">Tina Wulff</h1>
         <h2> < the next new
-            <span class="purple"></span> <span class="green">//ambitious, creativ & curious</span>
-            <span class="blue">web-developer ></span></h2>
+            <span class="purple"></span> <span class="green">//Frontend</span>
+            <span class="blue">web-developer</span> <span class="green">// + UX/UI designer</span> ></span></h2>
     `
 
     return headlinesElm

@@ -1,6 +1,11 @@
 
 import "./dev-projects.scss";
 
+import eva1 from '../assets/project-imgs/eva1.png';
+import evaVideo from '../assets/project-imgs/eva-video.mov';
+import believeFitnessVideo from '../assets/project-imgs/believe-fitness-video.mov';
+import believeFitness from '../assets/project-imgs/believefitness.png';
+import iPlayMusic from '../assets/project-imgs/iplaymusic1.png';
 import newsifyImg from '../assets/project-imgs/newsify.png';
 import movieImg from '../assets/project-imgs/front-project.png';
 import pokeImg from '../assets/project-imgs/poke-dex-frame.png';
@@ -9,16 +14,45 @@ import kontorassistancenImg from '../assets/project-imgs/kontorassistancen-web.p
 //import karmenImg from '../assets/project-imgs/karmen.png';
 //import avisImg from '../assets/project-imgs/avis.png';
 
-const imgArray = [newsifyImg, movieImg, pokeImg, kontorassistancenImg];
-const projectLinks = ["newsify-tina.netlify.app", "movie-site-tina.netlify.app", "tinas-pokedex-site.netlify.app", "kontorassistancen.dk"];
+const imgArray = [eva1, believeFitness, iPlayMusic, newsifyImg, movieImg, pokeImg, kontorassistancenImg];
+const projectLinks = [null, null, "https://iplaymusic-tina.netlify.app/", "https://newsify-tina.netlify.app/", "https://movie-site-tina.netlify.app/", "https://tinas-pokedex-site.netlify.app/", "https://kontorassistancen.dk"];
 const projectTexts = [
+        {
+        projectname: "Eva Steen Christensen",
+        description: "A makeover of the Artist's webpage. New design and therefor new theme for the webpage that the customer also can use to chage visuals etc. fx icluding a new design for menu/userflow, slider and portfolio-layout. Project is still under further development.",
+        technologies: "Wordpress, PHP, Wordpress Theme development, UX/UI Design",
+        links: {
+            github: null,
+            webpage: null,
+            video: evaVideo,
+        },
+    },
+            {
+        projectname: "Believe Fitness",
+        description: "A fitness app made in 2026, to show you the fitness classes and search in them. There is log in and create new user, also the admin can create a new class.",
+        technologies: "Next.js, Tailwind, HTML5, REST API",
+        links: {
+            github: "https://github.com/TinaWulff/believe-fitness-app",
+            webpage: null,
+            video: believeFitnessVideo,
+        },
+    },
+        {
+        projectname: "iPlayMusic",
+        description: "Music app to play music from Spotify. Spotify's API is used to fetch data from. This school-project is from January 2026.",
+        technologies: "Next.js, Tailwind, HTML5, REST API",
+        links: {
+            github: "https://github.com/TinaWulff/iPlayMusicApp",
+            webpage: "iplaymusic-tina.netlify.app/",
+        },
+    },
     {
         projectname: "Newsify",
         description: "News app made in 2025, to show you the latest and most popular news from The New York Times website, you can save the links you want for later in the Archive-page.",
         technologies: "Javascript, Vite, SCSS, HTML5, REST API",
         links: {
             github: "https://github.com/rts-cmk-wu13/projekt-newsify-TinaWulff",
-            webpage: "newsify-tina.netlify.app",
+            webpage: "newsify-tina.netlify.app/",
         },
     },
     {
@@ -50,6 +84,7 @@ const projectTexts = [
     },
 ]
 
+
 export default function projectsPresentation() {
     const webProjectsElm = document.createElement("section");
     webProjectsElm.className = "web-projects-section";
@@ -74,23 +109,34 @@ export default function projectsPresentation() {
                 <p>${project.description}</p>
                 <h4>Technologies:</h4>
                 <p>${project.technologies}</p>
-                <h4>Links:</h4>
-                <a href="${project.links.github}" target="_blank">GitHub</a><br>
-                <a href="https://${project.links.webpage}" target="_blank">Project link</a>
+                <h4>Code:</h4>
+                ${project.links.github ? `<a href="${project.links.github}" target="_blank">GitHub</a><br>` : `<span>No GitHub link</span><br>`}
+                <h4>Demo:</h4>
+                ${project.links.webpage ?
+                    `<a href="https://${project.links.webpage}" target="_blank">Project link</a>` :
+                    `<p>No online demo available</p>
+                    <p>Click to show video demonstration of project</p>
+                    <button class="show-video-btn"><i class="fa-solid fa-circle-play"></i>Show video demo</button>`
+                }
             </div>
 
             <article class="gallery">
                 <i class="fa-solid fa-chevron-left gallery-nav gallery-prev"></i>
                 <div class="img-container">
                     <img class="gallery-img" src="${imgArray[index]}" alt="project image">
-                    <a href="https://${projectLinks[index]}" class="img-link" target="_blank">Click to visit project-page</a>
+                    ${project.links.webpage ?
+                        `<a href="https://${project.links.webpage}" class="img-link" target="_blank">Click to visit project-page</a>` :
+                        project.links.video ?
+                            `<a href="#" class="img-link play-video-link"><i class="fa-solid fa-circle-play"></i> Play video demo</a>` :
+                            ''
+                    }
                 </div>
                 <i class="fa-solid fa-chevron-right gallery-nav gallery-next"></i>
             </article>
         </div>
         `;
 
-        // Nu findes HTML'en – så vi kan tilføje event listeners
+        // Event listeners til galleri-navigation
         const leftBtn = webProjectsElm.querySelector(".gallery-prev");
         const rightBtn = webProjectsElm.querySelector(".gallery-next");
 
@@ -103,6 +149,32 @@ export default function projectsPresentation() {
             currentImgIndex = (currentImgIndex + 1) % imgArray.length;
             renderProject(currentImgIndex);
         });
+
+        // Event listener til video-demo-knap og overlay play-link
+        const showVideoBtn = webProjectsElm.querySelector('.show-video-btn');
+        const playVideoLink = webProjectsElm.querySelector('.play-video-link');
+        function playVideo() {
+            const gallery = webProjectsElm.querySelector('.gallery .img-container');
+            if (gallery && project.links.video) {
+                gallery.innerHTML = `
+                    <video controls autoplay style="max-width:100%; border-radius: 8px;">
+                        <source src="${project.links.video}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                `;
+            } else {
+                alert('Video demo ikke tilgængelig for dette projekt.');
+            }
+        }
+        if (showVideoBtn) {
+            showVideoBtn.addEventListener('click', playVideo);
+        }
+        if (playVideoLink) {
+            playVideoLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                playVideo();
+            });
+        }
     }
 
     renderProject(currentImgIndex);
