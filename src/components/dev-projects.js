@@ -2,8 +2,8 @@
 import "./dev-projects.scss";
 
 import eva1 from '../assets/project-imgs/eva1.png';
-import evaVideo from '../assets/project-imgs/eva-video.mov';
-import believeFitnessVideo from '../assets/project-imgs/believe-fitness-video.mov';
+import evaVideo from '../assets/project-imgs/eva-video.mp4';
+import believeFitnessVideo from '../assets/project-imgs/believe-video.mp4';
 import believeFitness from '../assets/project-imgs/believefitness.png';
 import iPlayMusic from '../assets/project-imgs/iplaymusic1.png';
 import newsifyImg from '../assets/project-imgs/newsify.png';
